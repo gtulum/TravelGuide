@@ -24,24 +24,6 @@ import com.travelex.travelguide.model.TravelInfo;
 public class TravelGuideController {
 
 	
-	/*
-	 * This method calculates how many exact times can a person go through all
-	 * neighbor countries within his total budget. It calculates the
-	 * budget for each country in their respected currencies. If the exchange rate
-	 * is missing it returns the amount in the original currency. The
-	 * potential leftover amount from the total budget is returned in the original currency. 
-	 * 
-	 * Request Parameters : 
-	 * 
-	 * countryCode => Starting country
-	 * budget      => Budget per country (equal for all neighbor countries) 
-	 * totalBudget => Total budget 
-	 * curr        => Currency of the total budget
-	 * 
-	 * Example Request : http://localhost:8080/getTravelingInfo/BG/100/1200/EUR
-	 */	  
-	 
-	
 	@GetMapping(value = "getTravelingInfo/{countryCode}/{budget}/{totalBudget}/{curr}")
 	public TravelInfo getTravelInfo(@PathVariable("countryCode") String countryCode,
 			@PathVariable("budget") long budget,
